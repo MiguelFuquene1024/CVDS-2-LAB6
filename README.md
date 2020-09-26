@@ -20,6 +20,9 @@ Laboratorio 6 de ciclos
 
 ![](https://github.com/MiguelFuquene1024/CVDS-2-LAB6/blob/master/Images/CapturaPagina.png)
 
+*Url de la aplicación desplegada en Heroku:*
+
+https://cvds-2-lab6.herokuapp.com/faces/calculadora.xhtml
 
 **Badges**
 
