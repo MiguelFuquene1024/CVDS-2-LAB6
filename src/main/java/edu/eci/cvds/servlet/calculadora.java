@@ -1,10 +1,10 @@
 package edu.eci.cvds.servlet;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ApplicationScoped;
+//import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.SessionScoped;
 import java.util.*;
-import java.lang.*;
+import java.lang.Math;
 
 
 @ManagedBean(name="calculadoraBean")
@@ -18,10 +18,10 @@ public class calculadora{
 	private double desviacion = 0;
 	private double moda = 0;
 
-	
+	/**
 	public calculadora(){
 
-	}
+	}**/
 
 	public void formarLista(String entrada) {
 			valoresIngresados.add(entrada);
