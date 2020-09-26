@@ -1,27 +1,89 @@
 <!DOCTYPE html>
 	<html xmlns="http://www.w3c.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
-	<h:body>
-		<h:form id="calculadora_form" >
-			<p:inputText  id= "lista"  type="text" binding="#{input}"/>
-			<p:commandButton value = "Enviar" update="calculadora_form" actionListener="#{calculadoraBean.calcularTodo(input.value)}"/>
-			<br><p:outputLabel value="Promedio:" /></br>
-			<p:outputLabel value="#{calculadoraBean.promedio}" />
-			<br><p:outputLabel value="Desviación Estandar:" /></br>
-			<p:outputLabel value="#{calculadoraBean.desviacion}" />
-			<br><p:outputLabel value="Varianza:" /></br>
-			<p:outputLabel value="#{calculadoraBean.varianza}" />
-			<br><p:outputLabel value="Moda:" /></br>
-			<p:outputLabel value="#{calculadoraBean.moda}" />
-			<br> <p:commandButton value = "Reiniciar" update="calculadora_form" actionListener="#{calculadoraBean.restart()}"/></br>
-			<br></br>
-			<p:dataTable var="Valores Ingresados" value="#{calculadoraBean.valoresIngresados}" style="width:250px;" styleClass = "Table">
-				<p:column headerText="Valores Ingresados" >
-					<h:outputText value= "#{valoresIngresados}" />
-				</p:column>
-			</p:dataTable>
-		</h:form>
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough%22%3E"
+	>
+	<h:body >
+		<center>
+			<style>
+				body{
+					background-image: url(imagenes/imagen.jpg);
+				}
+				.contenedor{
+					position: relative;
+					display: inline-block;
+					text-align:center;
+				}
+				.texto-encima{
+						position: absolute;
+						top:1px;
+						left:120px;
+				}
+				.centrado{
+					position:absolute;
+					top: 40%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				.centrado2{
+					position: absolute;
+					top:292px;
+					left:120px;
+				}
+			</style>
+			<style type="text/css">
+
+			</style>
+			<div class="contenedor">
+				<div class="texto-encima">
+					<font face="impact" size="5" color="red"><br>Calculadora</br> Estadistica</font>
+				</div>
+				<img src="imagenes/cuadrado.jpg" width = "360" height = "480"/>
+				<div class="centrado">
+				
+				
+				<h:form id="calculadora_form" >
+					<p:inputText  size="24" id= "lista"  type="text" binding="#{input}"/>
+					<p:commandButton value = "Enviar" update="calculadora_form" style=' width:100px; height:50px' actionListener="#{calculadoraBean.calcularTodo(input.value)}"/>
+					<p:commandButton value = "Reiniciar" update="calculadora_form" style='width:100px; height:50px' actionListener="#{calculadoraBean.restart()}"/>
+				
+				
+					
+				
+				</h:form>
+						<p:panelGrid columns="2">
+							<h:outputText value="Promedio:" />
+							<p:outputLabel value="#{calculadoraBean.promedio}" />
+							
+							<h:outputText value="Desviación Estandar:" />
+							<p:outputLabel value="#{calculadoraBean.desviacion}" />
+								 
+							<h:outputText value="Varianza:" />
+							<p:outputLabel value="#{calculadoraBean.varianza}" />
+							
+							<h:outputText value="Moda:" />
+							<p:outputLabel value="#{calculadoraBean.moda}" />
+						</p:panelGrid>
+					</div>
+					<div class="centrado2">
+						<p:dataTable var="lista" value="#{calculadoraBean.lista}" rows="5" paginator="true" >
+							<p:column headerText="Valores Ingresados" >
+							<h:outputText value= "#{lista}" />
+							</p:column>
+						</p:dataTable>
+					</div>
+				
+					
+				
+				
+				
+			</div>
+			
+			
+			
+		</center>
 	</h:body>
 </html>
 
