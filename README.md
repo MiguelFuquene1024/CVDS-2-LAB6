@@ -18,7 +18,7 @@ Laboratorio 6 de ciclos
 *Imagen de la calculadora*
 
 
-![](Images/CapturaPagina.PNG)
+![](https://github.com/MiguelFuquene1024/CVDS-2-LAB6/blob/master/Images/CapturaPagina.png)
 
 
 **Badges**
